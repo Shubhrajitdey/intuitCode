@@ -2,6 +2,7 @@ package com.geektrust.backend.commands;
 
 import com.geektrust.backend.constants.Constant;
 import com.geektrust.backend.exceptions.CourseFullException;
+import com.geektrust.backend.exceptions.InvalidOperationException;
 import com.geektrust.backend.exceptions.MissingDataException;
 import com.geektrust.backend.services.ICourseEnrollmentService;
 
@@ -26,7 +27,7 @@ public class RegisterForCourseCommand implements ICommand{
             }
         } catch (CourseFullException e) {
             System.out.println(e.getMessage());
-        } catch (MissingDataException e) {
+        } catch (InvalidOperationException e) {
             System.out.println(e.getMessage());
         }catch (Exception e){
             System.out.println(e.getMessage());

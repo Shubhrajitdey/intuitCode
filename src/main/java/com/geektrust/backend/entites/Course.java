@@ -71,4 +71,9 @@ public class Course {
     public void addEmployeeToCourse(){
         this.totalRegistration++;
     }
+
+    @Override
+    public String toString() {
+        return "Course-"+this.courseId;
+    }
 }
